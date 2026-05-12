@@ -8,7 +8,7 @@ const { subtle } = webcrypto;
  * This key is embedded in their frontend bundle.
  */
 const ENCRYPTION_KEY_HEX =
-    'd8f2a1b5e9c470814f6b2c3a5d8e7f9c1a2b3c4d5e3f7a8b9c0d1e2f3a4d5c6d';
+    'a8f2a1b5e9c470814f6b2c3a5d8e7f9c1a2b3c4d5e3f7a8b8cad1e2f0a4d5c5a';
 
 /**
  * Peachify payload format:
@@ -119,11 +119,6 @@ export default async function decryptPayload(
 
         return JSON.parse(decryptedJson) as PeachifyApiResponse;
     } catch (error) {
-        console.error(
-            'Failed to decrypt Peachify payload. Payload may be invalid or tampered with.',
-            error
-        );
-
         return null;
     }
 }

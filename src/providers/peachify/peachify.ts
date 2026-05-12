@@ -125,7 +125,9 @@ export class PeachifyProvider extends BaseProvider {
 
         if (body.isEncrypted && body.data) {
             const decrypted = await decrypt(body.data);
-            if (!decrypted) return null;
+            if (!decrypted) {
+                return null;
+            }
             body = decrypted;
         }
         const rawSources = Array.isArray(body.sources) ? body.sources : [];
