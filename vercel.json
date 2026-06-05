@@ -1,8 +1,5 @@
 {
   "version": 2,
-  "functions": {
-    "dist/server.js": {}
-  },
   "rewrites": [
     { "source": "/(.*)", "destination": "/dist/server.js" }
   ],
