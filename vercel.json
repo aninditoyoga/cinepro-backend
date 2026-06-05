@@ -1,15 +1,10 @@
 {
   "version": 2,
   "functions": {
-    "dist/server.js": {
-      "runtime": "@vercel/node"
-    }
+    "dist/server.js": {}
   },
-  "routes": [
-    {
-      "src": "/(.*)",
-      "dest": "/dist/server.js"
-    }
+  "rewrites": [
+    { "source": "/(.*)", "destination": "/dist/server.js" }
   ],
   "env": {
     "NODE_ENV": "production",
